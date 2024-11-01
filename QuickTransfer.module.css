@@ -1,0 +1,19 @@
+.quickTransfer {
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background */
+    border: 1px solid rgba(0, 123, 255, 0.5); /* Light blue border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding around the text */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.quickTransfer:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.title {
+    font-size: 20px; /* Font size for the title */
+    font-weight: bold; /* Bold text */
+    color: #007bff; /* Blue color for text */
+}

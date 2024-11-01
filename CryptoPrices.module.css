@@ -1,0 +1,56 @@
+/* components/CryptoPrices.module.css */
+.homeTop {
+  padding: 20px; 
+ 
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.hotBitsWrapper {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Vertical layout for the wrapper */
+}
+
+.hotBitsMain {
+  display: flex; /* Horizontal layout for items */
+  justify-content: space-around; /* Space items evenly */
+  flex-wrap: wrap; /* Allow wrapping of items */
+  gap: 20px; /* Add space between boxes */
+}
+
+.flexItem {
+  display: flex; /* Flexbox for each item */
+  flex-direction: column; /* Stack name, value, and change vertically */
+  align-items: center; /* Center content */
+  padding: 20px; /* Padding around each item */
+  width: 180px; /* Fixed width for items */
+  height: 95px; /* Fixed height for items */
+  margin: 10px; /* Space between items */
+  background-color: #2c3e50; /* Background color for boxes */
+  border-radius: 8px; /* Rounded corners for items */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.flexItem:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.itemName {
+  font-size: 18px; /* Font size for the cryptocurrency name */
+  font-weight: bold; /* Bold text for the name */
+  color: #ecf0f1; /* Light color for better contrast */
+}
+
+.itemValue, .itemNum {
+  font-size: 16px; /* Font size for value and change */
+  color: #ecf0f1; /* Light color for better contrast */
+}
+
+.red {
+  color: red; /* Color for negative values */
+}
+
+.green {
+  color: green; /* Color for positive values */
+}

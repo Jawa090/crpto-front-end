@@ -1,0 +1,107 @@
+/* components/Navbar.module.css */
+.navbar {
+  margin-bottom: 20px; /* Adjusted bottom margin for spacing */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Align items vertically */
+  padding: 15px 30px; /* Padding around the navbar */
+
+  /* backdrop-filter: blur(10px); */
+  border-radius: 8px; /* Rounded corners for the navbar */
+}
+
+.logo {
+  display: flex;
+  flex-direction: column; /* Stack logo and text vertically */
+  align-items: center; /* Center items horizontally */
+  color: #ecf0f1; /* Light color for text */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center text alignment */
+}
+
+.logo img {
+  border-radius: 50%; /* Circular shape */
+  width: 60px; /* Increased width of the logo */
+  height: 60px; /* Increased height of the logo */
+  object-fit: cover; /* Maintain aspect ratio */
+  border: 2px solid #3498db; /* Border around the logo */
+}
+
+.logo h1 {
+  margin-top: 5px; /* Space between logo and text */
+  font-size: 18px; /* Increased font size for the name */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+.navLinks {
+  list-style: none; /* Remove default list styles */
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 25px; /* Increased space between links */
+}
+
+.navLinks li {
+  position: relative; /* For link hover effect */
+}
+
+.navLinks a {
+  color: #ecf0f1; /* Light color for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+  font-weight: 500; /* Slightly bold text */
+}
+
+.navLinks a:hover {
+  color: #3498db; /* Change color on hover */
+}
+
+.navLinks li::after {
+  content: ''; /* Create a pseudo-element for underline */
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Position it below the link */
+  width: 0;
+  height: 2px;
+  background: #3498db; /* Underline color */
+  transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.navLinks li:hover::after {
+  width: 100%; /* Full width on hover */
+  left: 0; /* Align it to the left */
+}
+
+.languageSelector {
+  cursor: pointer; /* Pointer cursor on hover */
+  color: #ecf0f1; /* Light color for language text */
+  position: relative; /* Position for dropdown */
+  font-size: 16px; /* Font size for language text */
+  margin-right: 20px; /* Margin to separate from navbar edges */
+}
+
+.dropdown {
+  position: absolute; /* Absolute positioning for dropdown */
+  top: 100%; /* Position below the selector */
+  left: 0; /* Align with the selector */
+  background-color: #2c3e50; /* Background for dropdown */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  z-index: 1000; /* Ensure it's above other elements */
+  margin-top: 5px; /* Space above dropdown */
+}
+
+.dropdown ul {
+  list-style: none; /* Remove default list styles */
+  padding: 10px; /* Padding around list */
+  margin: 0; /* Remove margin */
+}
+
+.dropdown li {
+  color: #ecf0f1; /* Light color for list items */
+  padding: 8px 12px; /* Padding around items */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.dropdown li:hover {
+  background-color: #3498db; /* Change background on hover */
+}

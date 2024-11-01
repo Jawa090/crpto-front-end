@@ -1,0 +1,87 @@
+/* components/Slider.module.css */
+.slider {
+  position: relative; /* Positioning for absolute child elements */
+  width: 100%; /* Full width of the screen */
+  height: 450px; /* Fixed height for the slider */
+  overflow: hidden; /* Hide overflow to prevent images from spilling out */
+  margin: 20px auto; /* Center the slider horizontally */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+
+.imageWrapper {
+  display: flex; /* Use flexbox to align images in a row */
+  transition: transform 0.5s ease; /* Smooth transition effect */
+  height: 100%; /* Fill the height of the slider */
+  position: relative; /* Positioning for the image wrapper */
+}
+
+.imageContainer {
+  position: relative; /* Positioning for the image container */
+  min-width: 100%; /* Each image container takes the full width */
+  height: 100%; /* Each image container takes the full height */
+  overflow: hidden; /* Hide overflow to prevent image spilling */
+}
+
+.image {
+  width: 100%; /* Ensure the image fills the width of the container */
+  height: 100%; /* Ensure the image fills the height of the container */
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Button styles */
+.slider button {
+  position: absolute; /* Position buttons over the slider */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust vertical alignment */
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for buttons */
+  color: #333; /* Dark text color */
+  border: none; /* Remove default button styles */
+  border-radius: 50%; /* Rounded buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 12px; /* Padding for buttons */
+  z-index: 2; /* Ensure buttons are above images */
+  font-size: 28px; /* Increase font size for arrows */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+}
+
+.slider button:hover {
+  background-color: rgba(76, 175, 80, 0.9); /* Darker green background on hover */
+  color: white; /* White text on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.slider .prev {
+  left: 15px; /* Position on the left */
+}
+
+.slider .next {
+  right: 15px; /* Position on the right */
+}
+
+/* Indicator styles */
+.indicators {
+  display: flex; /* Align dots horizontally */
+  justify-content: center; /* Center the dots */
+  margin-top: 15px; /* Space above dots */
+}
+
+.indicator {
+  width: 12px; /* Width of dots */
+  height: 12px; /* Height of dots */
+  border-radius: 50%; /* Circular dots */
+  background: rgba(0, 0, 0, 0.5); /* Default color */
+  margin: 0 6px; /* Space between dots */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s ease; /* Smooth transition for hover */
+}
+
+.indicator.active {
+  background: #4caf50; /* Color for active dot */
+}
+
+.indicator:hover {
+  background: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
